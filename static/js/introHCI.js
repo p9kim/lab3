@@ -13,8 +13,9 @@ function initializePage() {
 		$('.jumbotron h1').text("Javascript is connected");
 		$("#testjs").text("HMMMM");
 		$(".jumbotron p").toggleClass("acitve");
-		$("#submitBtn").click(updateProject);
 	});
+
+	$("#submitBtn").click(updateProject);
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
@@ -22,13 +23,13 @@ function initializePage() {
 }
 
 function updateProject(e) {
-	var projectID = $('#project').val();
-	$(projectID).animate({
-		width: $('#width').val()
-	});
+   var projectID = $('#project').val();
+   $(projectID).animate({
+      width: $('#width').val()
+   });
 
-	var newText = $('#description').val();
-	$(projectID + ".project-description").text(newText);
+   var newText = $('#description').val();
+   $(projectID + " .project-description").text(newText);
 }
 
 function projectClick(e) {
